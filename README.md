@@ -11,3 +11,25 @@ https://www.bilibili.com/video/BV1FU4y1v7yY?is_story_h5=false&p=1&share_from=ugc
 Cite:
 Liu F, Shen S-Y, Fu Z-W, Wang H-Y, Zhou A-M, Qi J-Y. LGCCT: A Light Gated and Crossed Complementation Transformer for Multimodal Speech Emotion Recognition. Entropy. 2022; 24(7):1010. https://doi.org/10.3390/e24071010
 
+## Preparation
+the folder structure should be as follows
+```css
+LGCCT
+├── data
+│   └── **.pkl
+├── modules
+│ 
+├── pre_trained_models
+│ 
+├── src
+│ 
+└── main.py
+```
+## Config
+the parameters can be set in [`main.py`](main.py)
+## Run
+```
+python ./main.py
+```
+## Acknowledgement
+Some portion of our code is from [`MUlT`](https://github.com/yaohungt/Multimodal-Transformer)
