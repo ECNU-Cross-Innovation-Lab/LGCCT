@@ -24,19 +24,13 @@ class Multimodal_Datasets(Dataset):
 
         # These are torch tensors
         #self.vision = torch.tensor(dataset[split_type]['vision'].astype(np.float32)).cpu().detach()
-        if split_type != 'test':
-            self.text = torch.tensor(dataset[split_type]['text'].astype(np.float32)).cpu().detach()
-        else:
-            self.text = torch.tensor(dataset[split_type]['text'][:,:40,:].astype(np.float32)).cpu().detach()
+        self.text = torch.tensor(dataset[split_type]['text'].astype(np.float32)).cpu().detach()
         # self.text = torch.tensor(dataset[split_type]['text_bert'].astype(np.float32)).cpu().detach()
         print(self.text.shape)
 
         self.audio = dataset[split_type]['audio'].astype(np.float32)
         self.audio[self.audio == -np.inf] = 0
-        if split_type != 'test':
-            self.audio = torch.tensor(self.audio).cpu().detach()
-        else:
-            self.audio = torch.tensor(self.audio[:,:40,:]).cpu().detach()
+        self.audio = torch.tensor(self.audio).cpu().detach()
         print(self.audio.shape)
 
         self.labels = torch.tensor(dataset[split_type]['labels'].astype(np.float32)).cpu().detach()
