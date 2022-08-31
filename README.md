@@ -20,8 +20,6 @@ LGCCT
 │   └── **.pkl
 ├── modules
 │ 
-├── pre_trained_models
-│ 
 ├── src
 │ 
 └── main.py
