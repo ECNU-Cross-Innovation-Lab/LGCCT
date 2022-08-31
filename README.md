@@ -12,7 +12,7 @@ Cite:
 Liu F, Shen S-Y, Fu Z-W, Wang H-Y, Zhou A-M, Qi J-Y. LGCCT: A Light Gated and Crossed Complementation Transformer for Multimodal Speech Emotion Recognition. Entropy. 2022; 24(7):1010. https://doi.org/10.3390/e24071010
 
 ## Preparation
-processed data can be obtained from [here](https://github.com/yaohungt/Multimodal-Transformer).
+processed data can be obtained from [here](https://github.com/yaohungt/Multimodal-Transformer).  
 the folder structure should be as follows
 ```css
 LGCCT
