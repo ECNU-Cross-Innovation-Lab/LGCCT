@@ -107,6 +107,7 @@ class MultiheadAttention(nn.Module):
                 attn_mask = torch.cat([attn_mask, attn_mask.new_zeros(attn_mask.size(0), 1)], dim=1)
         
         attn_weights = torch.bmm(q, k.transpose(1, 2))
+        # whether to use length-scaled
         # attn_weights = torch.log(torch.tensor([tgt_len],device=attn_weights.device)) * attn_weights
         assert list(attn_weights.size()) == [bsz * self.num_heads, tgt_len, src_len]
 
